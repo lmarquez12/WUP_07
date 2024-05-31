@@ -69,9 +69,19 @@ This numerical result shows that out of 100 people, 64 males and 36 females died
 It resulted in 3% of males dead, and 3% of women.  
 
 ## Inferential results 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+The p-value for the chi-squared test is .001, so we must reject the null hypothesis.   
+Based on the inferential results, the sex is not related to covid deaths. 
 
-
+The Fisher's exact test shows that ratio of men are 2.3 times more likely to die than women in Korea due to Covid 19.
 
 
 ## Conclusions
 
+The dying is not dependent on sex origin.   
+We reject the null $H_0$: because the p value is lower than .05.   
+The data from the inferential results determines that death and gender are not independently correlated. 
