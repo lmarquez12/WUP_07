@@ -34,6 +34,12 @@ state of a patient must be died or alive - we adjust that as well
   
 # Your Question - Is dying independent of sex?
 
+$H_0$:
+There is no difference in death rates depending upon on sex.
+
+
+$H_A$:
+There is a difference in death rates depending upon on sex.
 
 # Methods
 
@@ -54,7 +60,13 @@ It also reflects that there is a higher percentage of males than women dead.
 
   
 ## Numerical results
-
+```{r}
+table1 <- xtabs(~result + Sex,data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+This numerical result shows that out of 100 people, 64 males and 36 females died.   
+It resulted in 3% of males dead, and 3% of women.  
 
 ## Inferential results 
 
