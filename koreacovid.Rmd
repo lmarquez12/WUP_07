@@ -19,6 +19,8 @@ mutate(across(where(is.character), as.factor))
 
 ```
 
+
+
 #Introduction
 
 
@@ -40,13 +42,14 @@ The result depends on the sex, we use the helper file categorical~categorical.
 
 
 ## Graphical results - use ggplot commands to do this  
+```{r}
+barchartGC(~result + Sex,data=kRdata)
+barchartGC(~result + Sex,data=kRdata, type="percent")
 
+```
 
-
-  
-
-
-
+The bar chart shows that there is a higher percentage of females than males alive.   
+It also reflects that there is a higher percentage of males than women dead.
 
 
   
